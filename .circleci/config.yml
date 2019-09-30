@@ -26,7 +26,7 @@ jobs:
           MYSQL_DATABASE: magento
           MYSQL_ROOT_PASSWORD: docker
     environment:
-      MAGENTO_VERSION: "2.3"
+      MAGENTO_VERSION: "2.2"
     working_directory: /var/www/html
     steps:
       - pre_commands
@@ -79,7 +79,7 @@ jobs:
           MYSQL_DATABASE: magento
           MYSQL_ROOT_PASSWORD: docker
     environment:
-      MAGENTO_VERSION: "2.3"
+      MAGENTO_VERSION: "2.2"
     steps:
       - pre_commands
       - attach_workspace:
@@ -100,7 +100,7 @@ jobs:
           MYSQL_DATABASE: magento
           MYSQL_ROOT_PASSWORD: docker
     environment:
-      MAGENTO_VERSION: "2.3"
+      MAGENTO_VERSION: "2.2"
     steps:
       - pre_commands
       - attach_workspace:
