@@ -18,7 +18,7 @@ commands:
 jobs:
   build:
     docker:
-      - image: circleci/php:7.1-apache-node-browsers
+      - image: circleci/php:7.0-apache-node-browsers
       - image: circleci/mysql:5.7
         environment:
           MYSQL_PASSWORD: mage
@@ -52,7 +52,7 @@ jobs:
   code_sniffer:
     working_directory: /var/www/html
     docker:
-      - image: circleci/php:7.1-apache-node-browsers
+      - image: circleci/php:7.0-apache-node-browsers
       - image: circleci/mysql:5.7
         environment:
           MYSQL_PASSWORD: mage
@@ -71,7 +71,7 @@ jobs:
   mess_detector:
     working_directory: /var/www/html
     docker:
-      - image: circleci/php:7.1-apache-node-browsers
+      - image: circleci/php:7.0-apache-node-browsers
       - image: circleci/mysql:5.7
         environment:
           MYSQL_PASSWORD: mage
@@ -92,7 +92,7 @@ jobs:
   yireo:
     working_directory: /var/www/html
     docker:
-      - image: circleci/php:7.1-apache-node-browsers
+      - image: circleci/php:7.0-apache-node-browsers
       - image: circleci/mysql:5.7
         environment:
           MYSQL_PASSWORD: mage
@@ -134,10 +134,10 @@ workflows:
       - code_sniffer:
           requires:
             - build
-      - mess_detector:
-          requires:
-            - build
-      - yireo:
-          requires:
-            - build
+#      - mess_detector:
+#          requires:
+#            - build
+#      - yireo:
+#          requires:
+#            - build
 
