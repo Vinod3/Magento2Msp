@@ -134,9 +134,9 @@ workflows:
       - code_sniffer:
           requires:
             - build
-#      - mess_detector:
-#          requires:
-#            - build
-#      - yireo:
-#          requires:
-#            - build
+      - mess_detector:
+          requires:
+            - build
+      - yireo:
+          requires:
+            - build
